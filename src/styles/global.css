@@ -8,3 +8,7 @@
     pointer-events: initial;
   }
 }
+@font-face {
+  font-family: 'Cinzel';
+  src: url(../assets/fonts/Cinzel-VariableFont_wght.ttf);
+}
