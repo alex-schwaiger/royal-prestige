@@ -2,6 +2,9 @@
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+    fontFamily: {
+      cinzel: ['Cinzel', 'serif'],
+    },
     extend: {
       colors: {
         'royal-gold': '#D4BA86',
