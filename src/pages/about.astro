@@ -1,0 +1,213 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Timeline from "@components/Timeline.astro";
+import JobCard from "@components/JobCard.astro";
+import RecruitingPhoto from "@assets/people-hands.jpg";
+import HeroTeamPhoto from "@assets/business-team.png";
+
+type timelineItem = {
+  date: string;
+  title: string;
+  description: string;
+};
+
+type job = {
+  title: string;
+  description: string;
+  salary: string;
+  location: string;
+};
+
+type stat = {
+  title: string;
+  value: string;
+};
+
+const timeline:timelineItem[] = [
+  {
+    date: "Aug 2021",
+    title: "Founded company",
+    description: "Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.",
+  },
+  {
+    date: "Dez 2021",
+    title: "Secured $65m in funding",
+    description: "Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.",
+  },
+  {
+    date: "Feb 2022",
+    title: "Released beta",
+    description: "Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.",
+  },
+  {
+    date: "Dez 2022",
+    title: "Global launch of product",
+    description: "Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.",
+  },
+];
+
+const jobs: job[] = [
+  {
+    title: "Full-time designer",
+    description: "Quos sunt ad dolore ullam qui. Enim et quisquam dicta molestias. Corrupti quo voluptatum eligendi autem labore.",
+    salary: "$75,000 USD",
+    location: "San Francisco, CA",
+  },
+  {
+    title: "Laravel developer",
+    description: "Et veniam et officia dolorum rerum. Et voluptas consequatur magni sapiente amet voluptates dolorum. Ut porro aut eveniet.",
+    salary: "$125,000 USD",
+    location: "San Francisco, CA",
+  },
+  {
+    title: "React Native developer",
+    description: "Veniam ipsam nisi quas architecto eos non voluptatem in nemo. Est occaecati nihil omnis delectus illum est.",
+    salary: "$105,000 USD",
+    location: "San Francisco, CA",
+  },
+];
+
+const stats: stat[] =[
+  {
+    title: 'Transactions every 24 hours',
+    value: '44 million'
+  },
+  {
+    title: 'Assets under holding',
+    value: '$119 trillion'
+  },
+  {
+    title: 'New users annually',
+    value: '46,000'
+  }
+]
+
+---
+<Layout title="About Us">
+  <main class="isolate">
+    <!-- Hero section -->
+    <div class="relative isolate -z-10 overflow-hidden  pt-14">
+      <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+          <h1 class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">Welches Anliegen Wir uns gewidmet haben</h1>
+          <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+            <p class="text-lg leading-8 text-gray-600">Der hektische Alltag eines Selbstständigen kann nicht nur für die Einzelperson, sondern auch für die Familie eine enorme Herausforderung darstellen. Die täglichen Aufgaben im Haushalt sowie die ständigen Pendelfahrten beanspruchen wertvolle Zeit. Wie wäre es, diese Zeit stattdessen mit der Familie zu verbringen, sich zu entspannen und effizienter zu arbeiten? Dieses Anliegen nimmt sich Royal Prestige an.</p>
+          </div>
+          <img src={HeroTeamPhoto.src} alt="" class="mt-10 aspect-[1/1] w-full max-w-lg object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36">
+        </div>
+      </div>
+      <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+    </div>
+
+    <!-- Timeline section -->
+    <div class="mx-auto -mt-8 max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        {timeline.map(item => <Timeline date={item.date} title={item.title} description={item.description}/>)}
+      </div>
+    </div>
+
+    <div class="mx-auto mt-32 overflow-hidden sm:mt-40 max-w-7xl px-6  lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unsere Mission</h2>
+        <p class="font-cinzel mt-2.5 text-royal-gold font-light">Royal Prestige</p>
+        <div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
+          <div class="lg:w-full lg:max-w-2xl lg:flex-auto">
+            <p class="text-xl leading-8 text-gray-600">Die Mission von Royal Prestige besteht darin, den Weg zur Verwirklichung eines besseren Lebens auf innovative Weise neu zu gestalten. Unser zentrales Engagement liegt in Verbesserung des Wohlbefindens unserer heutigen Gesellschaft, und diese Verpflichtung durchdringt unsere tägliche Arbeit.</p>
+            <div class="mt-10 max-w-xl text-base leading-7 text-gray-700">
+              <p>Die Motivation basiert auf einer unermüdlichen Philosophie, die sich auf die Schaffung besserer, schnellerer und effizienterer Wege konzentriert. Das Ziel ist es, dabei zu helfen, genau das zu erreichen, was benötigt wird, und einem Lebensraum nach Wünschen zu gestalten.</p>
+            
+            </div>
+          </div>
+          <div class="lg:flex lg:flex-auto lg:justify-center">
+            <dl class="w-64 space-y-8 xl:w-80">
+              {stats.map(item => <div class="flex flex-col-reverse gap-y-4">
+                <dt class="text-base leading-7 text-gray-600">{item.title}</dt>
+                <dd class="text-5xl font-semibold tracking-tight text-gray-900">{item.value}</dd>
+              </div>)}
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content section -->
+    <div class="mt-32 overflow-hidden sm:mt-40">
+      <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+          <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unsere Mitarbeiter</h2>
+            <p class="font-cinzel mt-2.5 text-royal-gold font-light">Royal Prestige</p>
+            <p class="mt-6 text-xl leading-8 text-gray-600">Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem minus ut molestiae velit error quod. Excepturi quidem expedita molestias quas.</p>
+            <p class="mt-6 text-base leading-7 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.</p>
+          </div>
+          <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+            <div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+              <div class="aspect-[7/5] w-[37rem] max-w-none bg-royal-gray object-cover"></div>
+            </div>
+            <div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+              <div class="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
+                <div class="aspect-[4/3] w-[24rem] max-w-none flex-none bg-royal-gold object-cover"></div>
+              </div>
+              <div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                <div class="aspect-[7/5] w-[37rem] max-w-none flex-none bg-royal-gray object-cover"></div>
+              </div>
+              <div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                <div class="aspect-[4/3] w-[24rem] max-w-none bg-royal-gold object-cover"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Stats -->
+    <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Wir betrachten den Arbeit als etwas, das zu unserem Leben beiträgt und Wert für die Welt schafft.</h2>
+        <p class="font-cinzel mt-2.5 text-royal-gold font-light">Royal Prestige</p>
+      </div>
+      <div class="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+        <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
+          <p class="flex-none text-3xl font-bold tracking-tight text-gray-900">250k</p>
+          <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+            <p class="text-lg font-semibold tracking-tight text-gray-900">Users on the platform</p>
+            <p class="mt-2 text-base leading-7 text-gray-600">Vel labore deleniti veniam consequuntur sunt nobis.</p>
+          </div>
+        </div>
+        <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 bg-royal-gray p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
+          <p class="flex-none text-3xl font-bold tracking-tight text-white">$8.9 billion</p>
+          <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+            <p class="text-lg font-semibold tracking-tight text-white">We’re proud that our customers have made over $8 billion in total revenue.</p>
+            <p class="mt-2 text-base leading-7 text-gray-400">Eu duis porta aliquam ornare. Elementum eget magna egestas.</p>
+          </div>
+        </div>
+        <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 bg-royal-gold p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+          <p class="flex-none text-3xl font-bold tracking-tight text-white">401,093</p>
+          <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+            <p class="text-lg font-semibold tracking-tight text-white">Transactions this year</p>
+            <p class="mt-2 text-base leading-7 text-indigo-200">Eu duis porta aliquam ornare. Elementum eget magna egestas. Eu duis porta aliquam ornare.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Content section -->
+    <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+      <div class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
+        <div class="w-full lg:max-w-lg lg:flex-auto">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Wir suchen ständig nach Personen, die sich uns anschließen möchten.</h2>
+          <p class="font-cinzel mt-2.5 text-royal-gold font-light">Royal Prestige</p>
+        
+          <img src={RecruitingPhoto.src} alt="" class="mt-16 aspect-[6/5] w-full  bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]">
+        </div>
+        <div class="w-full lg:max-w-xl lg:flex-auto">
+          <h3 class="sr-only">Job openings</h3>
+          <ul class="-my-8 divide-y divide-gray-100">
+            {jobs.map(item => <JobCard role={item.title} description={item.description} salary={item.salary} location={item.location}/>)}
+          </ul>
+          <div class="mt-8 flex border-t border-gray-100 pt-8">
+            <a href="#" class="text-sm font-semibold leading-6 text-royal-gold">Alle Jobangebote <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
