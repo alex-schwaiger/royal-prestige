@@ -4,30 +4,31 @@ export type Link = {
 };
 
 export const links: Link[][] = [
+  
   [
     {
       name: 'Kochen',
-      link: '#',
+      link: 'cooking',
     },
     {
       name: 'Fitness',
-      link: '#',
+      link: 'fitness',
     },
     {
       name: 'Putzen',
-      link: '#',
+      link: 'cleaning',
     },
     {
       name: 'Butler',
-      link: '#',
+      link: 'butler',
     },
     {
-      name: 'Chaffeur',
-      link: '#',
+      name: 'Chauffeur',
+      link: 'chauffeur',
     },
     {
       name: 'Events',
-      link: '#',
+      link: 'events',
     },
   ],
   [
@@ -47,7 +48,7 @@ export const links: Link[][] = [
   [
     {
       name: 'Über uns',
-      link: '#',
+      link: 'about',
     },
     {
       name: 'Team',

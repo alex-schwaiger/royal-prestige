@@ -1,0 +1,22 @@
+---
+const advantages: string[] = [
+  'Gourmet-Erlebnis',
+  'Zeitersparnis',
+  'Maßgeschneiderte Menüs',
+];
+import BulletListItem from '../BulletListItem.astro';
+---
+
+<div class='bg-white'>
+  <div class='mx-4 py-4 grid place-items-center border-4 border-royal-gray'>
+    <div class=''>
+      <h2 class='font-medium text-3xl'>Unsere Vorteile</h2>
+      <p class='font-cinzel pt-1.5 grid place-items-center text-sm'>
+        Royal Prestige
+      </p>
+    </div>
+    <ul role='list' class='mt-3 space-y-3 leading-6 text-sm mb-2'>
+      {advantages.map((item) => <BulletListItem {item} />)}
+    </ul>
+  </div>
+</div>
