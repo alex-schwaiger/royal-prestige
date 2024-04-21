@@ -34,15 +34,15 @@ export const links: Link[][] = [
   [
     {
       name: 'Health Living',
-      link: '#',
+      link: 'health-living',
     },
     {
       name: 'Comfort Living',
-      link: '#',
+      link: 'comfort-living',
     },
     {
       name: 'Prestige Living',
-      link: '#',
+      link: 'prestige-living',
     },
   ],
   [
