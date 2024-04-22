@@ -1,69 +1,86 @@
 ---
 import { Image } from 'astro:assets';
 import putz from '../assets/putzen.png';
+import cooking from '../assets/cooking.jpg';
+import chauffeur from '../assets/chauffeur.jpg';
+import fitness from '../assets/fitness.jpg';
+import butler from '../assets/butler.jpg';
+import events from '../assets/e.jpg'
 ---
-
-<!-- <div class='bg-royal-gold py-12 sm:py-12'>
-  <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-    <div
-      class='isolate mx-auto grid max-w-md grid-cols-1 gap-y-8  lg:mx-0 lg:max-w-none lg:grid-cols-3'
-    >
-      <div
-        class='flex flex-col justify-between p-8 lg:p-6 lg:m-2 lg:mx-8 xl:p-10 xl:m-8 xl:mx-14'
-      >
-        <Image src={putz} alt='' class='' />
-      </div>
-      <div
-        class='flex flex-col justify-between p-8 lg:p-6 lg:m-2 lg:mx-8 xl:p-10 xl:m-8 xl:mx-14'
-      >
-        <Image src={putz} alt='' class='' />
-      </div>
-      <div
-        class='flex flex-col justify-between p-8 lg:p-6 lg:m-2 lg:mx-8 xl:p-10 xl:m-8 xl:mx-14'
-      >
-        <Image src={putz} alt='' class='' />
-      </div>
-    </div>
-  </div>
-</div> -->
+<!-- 
 <div>
-  <div class='grid grid-cols-2 md:grid-cols-3 gap-4'>
+  <div class='columns-2 md:columns-3 lg:columns-4'>
     <div>
       <img
-        class='h-auto max-w-full rounded-lg'
-        src='https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg'
+        src={putz.src}
+        alt=''
+      />
+    </div>
+    <div>
+      <img
+        src={cooking.src}
+        alt=''
+      />
+    </div>
+    <div>
+      <img
+        src={chauffeur.src}
+        alt=''
+      />
+    </div>
+    <div>
+      <img
+        src={fitness.src}
         alt=''
       />
     </div>
     <div>
       <img
         class='h-auto max-w-full rounded-lg'
-        src='https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg'
+        src={butler.src}
         alt=''
       />
-    </div>
-    <div>
-      <img
-        class='h-auto max-w-full rounded-lg'
-        src='https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg'
-        alt=''
-      />
+  </div>
+  <div>
+    <img
+      src={events.src}
+      alt=''
+    />
     </div>
   </div>
-  <div class='grid grid-cols-2 place-items-center md:grid-cols-3 gap-4'>
-    <div>
-      <img
-        class='h-auto max-w-full rounded-lg'
-        src='https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg'
-        alt=''
-      />
-    </div>
-    <div>
-      <img
-        class='h-auto max-w-full rounded-lg'
-        src='https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg'
-        alt=''
-      />
-    </div>
+</div>  -->
+
+<div class="container h-screen relative">
+  <div class="sticky overflow-hidden top-0 h-screen">
+      <div class="el h-screen absolute top-0 flex items-center justify-center">
+          <div class="imageContainer relative w-1/4 h-1/4">
+              <img class="object-cover w-full h-full" src={putz.src} alt="...">
+          </div>
+      </div>
+      <div class="el h-screen absolute top-0 flex items-center justify-center" style="top: -30vh; left: 5vw; width: 35vw; height: 30vh;">
+          <div class="imageContainer relative w-3/10 h-30vh">
+              <img class="object-cover w-full h-full" src={cooking.src} alt="...">
+          </div>
+      </div>
+      <div class="el h-screen absolute top-0 flex items-center justify-center" style="top: -10vh; left: -25vw; width: 20vw; height: 45vh;">
+          <div class="imageContainer relative w-1/5 h-45vh">
+              <img class="object-cover w-full h-full" src={chauffeur.src} alt="...">
+          </div>
+      </div>
+      <div class="el h-screen absolute top-0 flex items-center justify-center" style="left: 27.5vw; width: 25vw; height: 25vh;">
+          <div class="imageContainer relative w-1/4 h-1/4">
+              <img class="object-cover w-full h-full" src={fitness.src} alt="...">
+          </div>
+      </div>
+      <div class="el h-screen absolute top-0 flex items-center justify-center" style="top: 27.5vh; left: 5vw; width: 20vw; height: 25vh;">
+          <div class="imageContainer relative w-1/5 h-25vh">
+              <img class="object-cover w-full h-full" src={butler.src} alt="...">
+          </div>
+      </div>
+      <div class="el h-screen absolute top-0 flex items-center justify-center" style="top: 27.5vh; left: -22.5vw; width: 30vw; height: 25vh;">
+          <div class="imageContainer relative w-3/10 h-25vh">
+              <img class="object-cover w-full h-full" src={butler.src} alt="...">
+          </div>
+      </div>
   </div>
 </div>
