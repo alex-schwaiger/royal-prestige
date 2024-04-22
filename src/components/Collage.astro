@@ -6,51 +6,53 @@ import chauffeur from '../assets/chauffeur.jpg';
 import fitness from '../assets/fitness.jpg';
 import butler from '../assets/butler.jpg';
 import events from '../assets/e.jpg'
+import Container from './Container.astro';
 ---
-<!-- 
-<div>
-  <div class='columns-2 md:columns-3 lg:columns-4'>
-    <div>
-      <img
-        src={putz.src}
-        alt=''
-      />
-    </div>
-    <div>
-      <img
-        src={cooking.src}
-        alt=''
-      />
-    </div>
-    <div>
-      <img
-        src={chauffeur.src}
-        alt=''
-      />
-    </div>
-    <div>
-      <img
-        src={fitness.src}
-        alt=''
-      />
-    </div>
-    <div>
-      <img
-        class='h-auto max-w-full rounded-lg'
-        src={butler.src}
-        alt=''
-      />
-  </div>
-  <div>
-    <img
-      src={events.src}
-      alt=''
-    />
-    </div>
-  </div>
-</div>  -->
 
-<div class="container h-screen relative">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-royal-gray py-8">
+    <div class='columns-1 sm:columns-2 md:columns-3 space-y-6 justify-center self-center'>
+      <div>
+        <img
+          src={putz.src}
+          alt=''
+        />
+      </div>
+      <div>
+        <img
+          src={cooking.src}
+          alt=''
+        />
+      </div>
+      <div>
+        <img
+          src={chauffeur.src}
+          alt=''
+        />
+      </div>
+      <div>
+        <img
+          src={fitness.src}
+          alt=''
+        />
+      </div>
+      
+      <div>
+        <img
+          src={butler.src}
+          alt=''
+        />
+    </div>
+    <div>
+      <img
+        src={events.src}
+        alt=''
+      />
+      </div>
+    </div>
+  </div> 
+
+
+<!-- <div class="container h-screen relative">
   <div class="sticky overflow-hidden top-0 h-screen">
       <div class="el h-screen absolute top-0 flex items-center justify-center">
           <div class="imageContainer relative w-1/4 h-1/4">
@@ -83,4 +85,4 @@ import events from '../assets/e.jpg'
           </div>
       </div>
   </div>
-</div>
+</div> -->
