@@ -84,7 +84,7 @@ export const links: Link[][] = [
   [
     {
       name: 'Kontakt',
-      link: '#',
+      link: 'contact',
     },
     {
       name: 'Impressum',
