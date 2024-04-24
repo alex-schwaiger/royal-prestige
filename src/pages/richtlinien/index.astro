@@ -1,0 +1,38 @@
+---
+import Layout from "@layouts/Layout.astro";
+import QuickLinkCard from "@components/QuickLinkCard.astro";
+
+const quickLinks = [
+  {
+    title: "Impressum",
+    href: "/richtlinien/impressum",
+  },
+  {
+    title: 'AGB',
+    href: '/richtlinien/agb'
+  },
+  {
+    title: 'Datenschutz',
+    href: '/richtlinien/datenschutz'
+  }
+];
+---
+
+<Layout title="Richtlinien">
+  <div class="bg-white min-h-svh grid place-items-center">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900">Unsere Richtlinien</h2>
+            <p class="mt-4 leading-7 text-gray-600">Richtlinien, die im Falle eines Verstoß zur Anzeige führen.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+            {quickLinks.map((link) => <QuickLinkCard title={link.title} link={link.href} />)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</Layout>

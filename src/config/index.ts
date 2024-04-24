@@ -4,7 +4,6 @@ export type Link = {
 };
 
 export const links: Link[][] = [
-  
   [
     {
       name: 'Kochen',
@@ -88,7 +87,7 @@ export const links: Link[][] = [
     },
     {
       name: 'Impressum',
-      link: '#',
+      link: '/richtlinien/impressum',
     },
     {
       name: 'Datenschutz',
