@@ -18,70 +18,49 @@ type job = {
   location: string;
 };
 
-type stat = {
-  title: string;
-  value: string;
-};
-
 const timeline:timelineItem[] = [
   {
-    date: "Aug 2021",
-    title: "Founded company",
+    date: "Aug 2018",
+    title: "Royal Prestige Gründung",
     description: "Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.",
   },
   {
-    date: "Dez 2021",
-    title: "Secured $65m in funding",
+    date: "Dez 2020",
+    title: "100 Kunden",
     description: "Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.",
   },
   {
     date: "Feb 2022",
-    title: "Released beta",
+    title: "Erweiterung um Events",
     description: "Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.",
   },
   {
-    date: "Dez 2022",
-    title: "Global launch of product",
+    date: "Dez 2023",
+    title: "320 Kunden",
     description: "Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.",
   },
 ];
 
 const jobs: job[] = [
   {
-    title: "Full-time designer",
+    title: "Marketing & Design",
     description: "Quos sunt ad dolore ullam qui. Enim et quisquam dicta molestias. Corrupti quo voluptatum eligendi autem labore.",
-    salary: "$75,000 USD",
+    salary: "75.000",
     location: "San Francisco, CA",
   },
   {
-    title: "Laravel developer",
+    title: "HR Manager",
     description: "Et veniam et officia dolorum rerum. Et voluptas consequatur magni sapiente amet voluptates dolorum. Ut porro aut eveniet.",
-    salary: "$125,000 USD",
+    salary: "80.000",
     location: "San Francisco, CA",
   },
   {
-    title: "React Native developer",
+    title: "Empfangsmitarbeiter",
     description: "Veniam ipsam nisi quas architecto eos non voluptatem in nemo. Est occaecati nihil omnis delectus illum est.",
-    salary: "$105,000 USD",
+    salary: "50.000",
     location: "San Francisco, CA",
   },
 ];
-
-const stats: stat[] =[
-  {
-    title: 'Transactions every 24 hours',
-    value: '44 million'
-  },
-  {
-    title: 'Assets under holding',
-    value: '$119 trillion'
-  },
-  {
-    title: 'New users annually',
-    value: '46,000'
-  }
-]
-
 ---
 <Layout title="About Us">
   <main class="isolate">
@@ -117,14 +96,6 @@ const stats: stat[] =[
               <p>Die Motivation basiert auf einer unermüdlichen Philosophie, die sich auf die Schaffung besserer, schnellerer und effizienterer Wege konzentriert. Das Ziel ist es, dabei zu helfen, genau das zu erreichen, was benötigt wird, und einem Lebensraum nach Wünschen zu gestalten.</p>
             
             </div>
-          </div>
-          <div class="lg:flex lg:flex-auto lg:justify-center">
-            <dl class="w-64 space-y-8 xl:w-80">
-              {stats.map(item => <div class="flex flex-col-reverse gap-y-4">
-                <dt class="text-base leading-7 text-gray-600">{item.title}</dt>
-                <dd class="text-5xl font-semibold tracking-tight text-gray-900">{item.value}</dd>
-              </div>)}
-            </dl>
           </div>
         </div>
       </div>
@@ -167,9 +138,9 @@ const stats: stat[] =[
       </div>
       <div class="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
         <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
-          <p class="flex-none text-3xl font-bold tracking-tight text-gray-900">250k</p>
+          <p class="flex-none text-3xl font-bold tracking-tight text-gray-900">330</p>
           <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-            <p class="text-lg font-semibold tracking-tight text-gray-900">Users on the platform</p>
+            <p class="text-lg font-semibold tracking-tight text-gray-900">Beständige Kunden</p>
             <p class="mt-2 text-base leading-7 text-gray-600">Vel labore deleniti veniam consequuntur sunt nobis.</p>
           </div>
         </div>
